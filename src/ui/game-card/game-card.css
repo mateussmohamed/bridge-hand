@@ -1,0 +1,52 @@
+.game-card {
+  height: 120px;
+  width: 80px;
+  background-color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: black;
+  display: inline-block;
+  box-sizing: inherit;
+}
+
+.game-card--red {
+  color: red;
+}
+
+.game-card--black {
+  color: black;
+}
+
+.game-card-left {
+  width: 35px;
+  float: left;
+}
+
+.game-card-right {
+  width: 35px;
+  float: right;
+}
+
+.game-card-rank {
+  font-size: 24px;
+  margin: 5% 0 5% 10%;
+}
+
+.game-card-small-suit {
+  font-size: 22px;
+  margin: 5% 5% 5% 20px;
+}
+
+.game-card-large-suit {
+  font-size: 48px;
+  margin: 80% 0 0 7%;
+}
+
+.game-card-place-right {
+  margin-left: -45px;
+}
+
+.game-card-place-down {
+  margin-top: -90px;
+}
