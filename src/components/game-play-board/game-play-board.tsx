@@ -11,7 +11,7 @@ export function GamePlayBoard() {
   const totalPoints = Object.values(pointsByHand).reduce((acc, curr) => acc + curr, 0)
 
   const calculatePoints = usePlayBoard(state => state.calculatePoints)
-  const shuffleCards = usePlayBoard(state => state.shuffleCards)
+  const shuffleDeck = usePlayBoard(state => state.shuffleDeck)
 
   return (
     <div className="game-play-board">
@@ -23,11 +23,11 @@ export function GamePlayBoard() {
 
         <div className="game-play-board-actions">
           <button className="game-play-board-button" type="button" onClick={calculatePoints} disabled={totalPoints > 0}>
-            Calculate points
+            Calculate Points
           </button>
 
-          <button className="game-play-board-button" type="button" onClick={shuffleCards}>
-            Shuffle
+          <button className="game-play-board-button" type="button" onClick={shuffleDeck}>
+            Shuffle Cards
           </button>
         </div>
         <Hand cards={deck.south} direction="south" place="right" points={pointsByHand.south} />

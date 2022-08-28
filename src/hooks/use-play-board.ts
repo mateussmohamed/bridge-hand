@@ -112,13 +112,13 @@ interface PlayBoardState {
     west: number
   }
   calculatePoints: () => void
-  shuffleCards: () => void
+  shuffleDeck: () => void
 }
 
 export const usePlayBoard = create<PlayBoardState>(set => ({
   pointsByHand: Object.assign({}, INITIAL_POINTS_BY_HAND),
   deck: generateDeck(),
-  shuffleCards: () => set(() => ({ deck: generateDeck(), pointsByHand: Object.assign({}, INITIAL_POINTS_BY_HAND) })),
+  shuffleDeck: () => set(() => ({ deck: generateDeck(), pointsByHand: Object.assign({}, INITIAL_POINTS_BY_HAND) })),
   calculatePoints: () => set(state => ({ pointsByHand: calculatePoints(state.deck) })),
   resetPoints: () => set(() => ({ pointsByHand: Object.assign({}, INITIAL_POINTS_BY_HAND) }))
 }))
