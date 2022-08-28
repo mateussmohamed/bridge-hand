@@ -6,7 +6,7 @@ import type { Card, SuitSymbols } from '../@types'
 
 const SUIT_ORDER = ['♣', '♦', '♥', '♠']
 
-const POINTS_MAP: Record<string, number> = { J: 1, Q: 4, K: 3, A: 4 }
+const POINTS_MAP: Record<string, number> = { J: 1, Q: 2, K: 3, A: 4 }
 
 const CARD_TO_RANK: Record<string, number> = { J: 11, Q: 12, K: 13, A: 14 }
 
