@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lodash.range": "^3.2.0",
+    "lodash.shuffle": "^4.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.1.1"
   },
   "devDependencies": {
+    "@types/lodash.range": "^3.2.7",
+    "@types/lodash.shuffle": "^4.2.7",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
