@@ -1,0 +1,36 @@
+.hand-container {
+  display: flex;
+}
+
+.hand-container-vertical {
+  width: 86px;
+  flex-direction: column;
+}
+
+.hand-container-horizontal {
+  width: 100%;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hand-cards {
+  border-radius: 0.5rem;
+}
+
+.hand-container-horizontal .hand-cards {
+  flex-direction: row;
+}
+
+.hand-container-vertical .hand-cards {
+  flex-direction: column;
+  width: 86px;
+}
+
+.hand-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}

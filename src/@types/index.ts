@@ -1,4 +1,6 @@
+export type SuitSymbols = '♣' | '♦' | '♥' | '♠'
+
 export type Card = {
   rank: string
-  suit: string
+  suit: SuitSymbols
 }

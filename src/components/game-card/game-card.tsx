@@ -1,3 +1,5 @@
+import type { Card, SuitSymbols } from '../../@types'
+
 import './game-card.css'
 
 enum COLOR_MAP {
@@ -7,11 +9,7 @@ enum COLOR_MAP {
   '♠' = 'game-card--black'
 }
 
-type SuitSymbols = '♣' | '♦' | '♥' | '♠'
-
-interface CardProps {
-  suit: SuitSymbols
-  rank: string
+interface GameCardProps extends Card {
   place: 'down' | 'right'
 }
 
@@ -19,7 +17,7 @@ function suitToColor(suit: SuitSymbols) {
   return COLOR_MAP[suit] || 'game-card--black'
 }
 
-export function GameCard({ rank, suit, place = 'down' }: CardProps) {
+export function GameCard({ rank, suit, place = 'down' }: GameCardProps) {
   const placeClass = place === 'right' ? 'game-card-place-right' : 'game-card-place-down'
 
   return (

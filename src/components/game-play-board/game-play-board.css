@@ -1,9 +1,4 @@
-body {
-  background: rgb(154 207 129);
-  background: radial-gradient(circle, rgb(154 207 129) 0%, rgb(67 125 39) 50%, rgb(4 34 11) 100%);
-}
-
-.container {
+.game-play-board {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: auto;
@@ -19,66 +14,30 @@ body {
   align-content: stretch;
 }
 
-.left {
+.game-play-board-left {
   grid-area: left;
   align-self: center;
 }
 
-.center {
+.game-play-board-center {
   grid-area: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.right {
+.game-play-board-right {
   grid-area: right;
   align-self: center;
 }
 
-.hand-container {
-  display: flex;
-}
-
-.hand-container-vertical {
-  width: 86px;
-  flex-direction: column;
-}
-
-.hand-container-horizontal {
-  width: 100%;
-  padding: 1rem;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hand-cards {
-  border-radius: 0.5rem;
-}
-
-.hand-container-horizontal .hand-cards {
-  flex-direction: row;
-}
-
-.hand-container-vertical .hand-cards {
-  flex-direction: column;
-  width: 86px;
-}
-
-.hand-title {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize;
-  color: white;
-}
-
-.container-call-to-actions {
+.game-play-board-actions {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
-.button-calculate-points {
+.game-play-board-button {
   appearance: none;
   background-color: #000000;
   border: 2px solid #1a1a1a;
@@ -105,16 +64,16 @@ body {
   will-change: transform;
 }
 
-.button-calculate-points:disabled {
+.game-play-board-button:disabled {
   pointer-events: none;
 }
 
-.button-calculate-points:hover {
+.game-play-board-button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.button-calculate-points:active {
+.game-play-board-button:active {
   box-shadow: none;
   transform: translateY(0);
 }

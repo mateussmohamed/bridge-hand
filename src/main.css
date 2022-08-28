@@ -85,3 +85,8 @@ meter {
 :where([draggable='true']) {
   -webkit-user-drag: element;
 }
+
+body {
+  background: rgb(154 207 129);
+  background: radial-gradient(circle, rgb(154 207 129) 0%, rgb(67 125 39) 50%, rgb(4 34 11) 100%);
+}

@@ -1,5 +1,8 @@
-import type { Card } from '../@types'
-import { GameCard } from '../ui/game-card/game-card'
+import type { Card } from '../../@types'
+
+import { GameCard } from '../game-card/game-card'
+
+import './game-board.css'
 
 interface BoardProps {
   cards: Card[]
