@@ -1,6 +1,6 @@
 .game-card {
-  height: 120px;
-  width: 80px;
+  height: 170px;
+  width: 130px;
   background-color: white;
   border-width: 3px;
   border-style: solid;
@@ -44,9 +44,9 @@
 }
 
 .game-card-place-right {
-  margin-left: -45px;
+  margin-left: -90px;
 }
 
 .game-card-place-down {
-  margin-top: -90px;
+  margin-top: -140px;
 }

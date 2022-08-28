@@ -66,6 +66,7 @@
 
 .game-play-board-button:disabled {
   pointer-events: none;
+  background-color: #333333;
 }
 
 .game-play-board-button:hover {

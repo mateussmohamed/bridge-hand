@@ -8,15 +8,18 @@ interface BoardProps {
   cards: Card[]
   place: 'down' | 'right'
   direction: 'north' | 'east' | 'south' | 'west'
+  points: number
 }
 
-export function Board({ cards, place, direction }: BoardProps) {
+export function Board({ cards, place, direction, points }: BoardProps) {
   const containerClass = ['north', 'south'].includes(direction)
     ? 'hand-container-horizontal'
     : 'hand-container-vertical'
 
   return (
     <div className={`hand-container ${containerClass} hand-${direction}`}>
+      <h1 className="hand-title">{direction}</h1>
+
       <div className="hand-cards">
         {cards.map(({ rank, suit }, index) => {
           let className = ''
@@ -28,7 +31,7 @@ export function Board({ cards, place, direction }: BoardProps) {
         })}
       </div>
 
-      <h1 className="hand-title">{direction}</h1>
+      <h1 className="hand-point">Points: {points}</h1>
     </div>
   )
 }
