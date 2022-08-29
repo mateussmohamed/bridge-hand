@@ -6,8 +6,13 @@
   border-style: solid;
   border-radius: 10px;
   border-color: black;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
   box-sizing: inherit;
+  align-content: center;
+  justify-content: flex-start;
 }
 
 .game-card--red {
@@ -18,35 +23,39 @@
   color: black;
 }
 
-.game-card-left {
-  width: 35px;
-  float: left;
+.game-card-top {
+  align-self: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
 }
 
-.game-card-right {
-  width: 35px;
-  float: right;
+.game-card-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  width: 100%;
 }
 
 .game-card-rank {
-  font-size: 24px;
-  margin: 5% 0 5% 10%;
+  font-size: 32px;
 }
 
 .game-card-small-suit {
-  font-size: 22px;
-  margin: 5% 5% 5% 20px;
+  font-size: 32px;
 }
 
 .game-card-large-suit {
-  font-size: 48px;
-  margin: 80% 0 0 7%;
+  font-size: 82px;
 }
 
 .game-card-place-right {
-  margin-left: -90px;
+  margin-right: -70px;
 }
 
 .game-card-place-down {
-  margin-top: -140px;
+  margin-bottom: -120px;
 }
