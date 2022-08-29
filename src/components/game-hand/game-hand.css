@@ -20,7 +20,6 @@
 
 .hand-container-horizontal .hand-cards {
   flex-direction: row;
-  margin-left: 90px;
 }
 
 .hand-container-vertical .hand-cards {
