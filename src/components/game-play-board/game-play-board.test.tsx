@@ -58,4 +58,21 @@ describe('<GamePlayBoard />', () => {
 
     expect(handCardsPoints).not.toEqual(afterHandCardsPoints)
   })
+
+  test('should reset the points after shuffle the deck of cards', async () => {
+    expect(screen.getAllByText('Points: 0')).toHaveLength(4)
+
+    await userEvent.click(screen.getByRole('button', { name: /calculate points/i }))
+
+    expect((await screen.findByTestId('hand-west-points')).textContent).not.toBe('Points: 0')
+    expect((await screen.findByTestId('hand-north-points')).textContent).not.toBe('Points: 0')
+    expect((await screen.findByTestId('hand-east-points')).textContent).not.toBe('Points: 0')
+    expect((await screen.findByTestId('hand-south-points')).textContent).not.toBe('Points: 0')
+
+    expect(await screen.findByRole('button', { name: /calculate points/i })).toBeDisabled()
+
+    await userEvent.click(screen.getByRole('button', { name: /shuffle cards/i }))
+
+    expect(screen.getAllByText('Points: 0')).toHaveLength(4)
+  })
 })

@@ -31,7 +31,9 @@ export function GameHand({ cards, place, direction, points }: HandProps) {
         })}
       </div>
 
-      <h3 className="hand-point">Points: {points}</h3>
+      <h3 className="hand-point" data-testid={`hand-${direction}-points`}>
+        Points: {points}
+      </h3>
     </div>
   )
 }
