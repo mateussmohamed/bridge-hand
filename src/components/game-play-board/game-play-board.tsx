@@ -1,6 +1,6 @@
 import './game-play-board.css'
 
-import { Hand } from '../hand'
+import { GameHand } from '../game-hand'
 
 import { usePlayBoard } from '../../hooks/use-play-board'
 
@@ -15,10 +15,10 @@ export function GamePlayBoard() {
   return (
     <div className="game-play-board">
       <div className="game-play-board-left">
-        <Hand cards={deck.west} direction="west" place="down" points={pointsByHand.west} />
+        <GameHand cards={deck.west} direction="west" place="down" points={pointsByHand.west} />
       </div>
       <div className="game-play-board-center">
-        <Hand cards={deck.north} direction="north" place="right" points={pointsByHand.north} />
+        <GameHand cards={deck.north} direction="north" place="right" points={pointsByHand.north} />
 
         <div className="game-play-board-actions">
           <button
@@ -34,10 +34,10 @@ export function GamePlayBoard() {
             Shuffle Cards
           </button>
         </div>
-        <Hand cards={deck.south} direction="south" place="right" points={pointsByHand.south} />
+        <GameHand cards={deck.south} direction="south" place="right" points={pointsByHand.south} />
       </div>
       <div className="game-play-board-right">
-        <Hand cards={deck.east} direction="east" place="down" points={pointsByHand.east} />
+        <GameHand cards={deck.east} direction="east" place="down" points={pointsByHand.east} />
       </div>
     </div>
   )

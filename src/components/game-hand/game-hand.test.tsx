@@ -1,7 +1,7 @@
 import { Card } from '../../@types'
 import { render, screen } from '../../test/utils'
 
-import { Hand } from './hand'
+import { GameHand } from './game-hand'
 
 const CARDS_MOCK = [
   {
@@ -58,14 +58,14 @@ const CARDS_MOCK = [
   }
 ] as Card[]
 
-describe('<Hand />', () => {
+describe('<GameHand />', () => {
   test.each([
     ['west', 4, 'hand-container-vertical', 'down'],
     ['north', 8, 'hand-container-horizontal', 'right'],
     ['east', 12, 'hand-container-vertical', 'right'],
     ['south', 16, 'hand-container-horizontal', 'down']
   ])('should render a Hand at %s with %s points', (hand, points, classname, place) => {
-    render(<Hand cards={CARDS_MOCK} place={place as never} direction={hand as never} points={points} />)
+    render(<GameHand cards={CARDS_MOCK} place={place as never} direction={hand as never} points={points} />)
 
     expect(screen.getByTestId(`hand-${hand}`)).toHaveClass(`hand-${hand}`)
     expect(screen.getByTestId(`hand-${hand}`)).toHaveClass(classname)

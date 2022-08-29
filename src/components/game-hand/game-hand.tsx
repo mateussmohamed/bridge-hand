@@ -1,4 +1,4 @@
-import './hand.css'
+import './game-hand.css'
 
 import type { Card } from '../../@types'
 
@@ -11,7 +11,7 @@ interface HandProps {
   points: number
 }
 
-export function Hand({ cards, place, direction, points }: HandProps) {
+export function GameHand({ cards, place, direction, points }: HandProps) {
   const containerClass = ['north', 'south'].includes(direction)
     ? 'hand-container-horizontal'
     : 'hand-container-vertical'
