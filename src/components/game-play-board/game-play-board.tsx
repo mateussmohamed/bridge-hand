@@ -7,11 +7,10 @@ import { usePlayBoard } from '../../hooks/use-play-board'
 export function GamePlayBoard() {
   const deck = usePlayBoard(state => state.deck)
   const pointsByHand = usePlayBoard(state => state.pointsByHand)
-
-  const totalPoints = Object.values(pointsByHand).reduce((acc, curr) => acc + curr, 0)
-
   const calculatePoints = usePlayBoard(state => state.calculatePoints)
   const shuffleDeck = usePlayBoard(state => state.shuffleDeck)
+
+  const disableCalculatePoints = Object.values(pointsByHand).reduce((acc, curr) => acc + curr, 0) > 0
 
   return (
     <div className="game-play-board">
@@ -22,7 +21,12 @@ export function GamePlayBoard() {
         <Hand cards={deck.north} direction="north" place="right" points={pointsByHand.north} />
 
         <div className="game-play-board-actions">
-          <button className="game-play-board-button" type="button" onClick={calculatePoints} disabled={totalPoints > 0}>
+          <button
+            className="game-play-board-button"
+            type="button"
+            onClick={calculatePoints}
+            disabled={disableCalculatePoints}
+          >
             Calculate Points
           </button>
 

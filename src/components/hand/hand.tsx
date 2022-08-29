@@ -17,7 +17,7 @@ export function Hand({ cards, place, direction, points }: HandProps) {
     : 'hand-container-vertical'
 
   return (
-    <div className={`hand-container ${containerClass} hand-${direction}`}>
+    <div className={`hand-container ${containerClass} hand-${direction}`} data-testid={`hand-${direction}`}>
       <h1 className="hand-title">{direction}</h1>
 
       <div className="hand-cards">
@@ -31,7 +31,7 @@ export function Hand({ cards, place, direction, points }: HandProps) {
         })}
       </div>
 
-      <h1 className="hand-point">Points: {points}</h1>
+      <h3 className="hand-point">Points: {points}</h3>
     </div>
   )
 }

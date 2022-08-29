@@ -21,14 +21,18 @@ export function GameCard({ rank, suit, place = 'down' }: GameCardProps) {
   const placeClass = place === 'right' ? 'game-card-place-right' : 'game-card-place-down'
 
   return (
-    <div data-testid={`game-card-${rank}-${suit}`} className={`game-card ${suitToColor(suit)} ${placeClass}`}>
-      <div className="game-card-left">
+    <div
+      data-testid={`game-card`}
+      aria-label={`game-card-${rank}-${suit}`}
+      className={`game-card ${suitToColor(suit)} ${placeClass}`}
+    >
+      <div className="game-card-top">
         <div className="game-card-rank">{rank}</div>
-        <div className="game-card-large-suit">{suit}</div>
+        <div className="game-card-small-suit">{suit}</div>
       </div>
 
-      <div className="game-card-right">
-        <div className="game-card-small-suit">{suit}</div>
+      <div className="game-card-center">
+        <div className="game-card-large-suit">{suit}</div>
       </div>
     </div>
   )
